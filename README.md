@@ -8,7 +8,7 @@ Run it likes this.
 On the first run the program will download color and elevation data from the CGI Moon Kit.
 
 ```Shell
-clj -M core.clj
+clj -M moon.clj
 ```
 
 You can click and drag to rotate the Moon.
