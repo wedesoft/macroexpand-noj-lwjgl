@@ -8,8 +8,8 @@
         '[org.lwjgl.stb STBImageWrite])
 
 
-(def window-width 1024)
-(def window-height 768)
+(def window-width 1280)
+(def window-height 720)
 (def radius 1737.4)
 
 (def mouse-pos (atom [0.0 0.0]))
