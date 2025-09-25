@@ -171,7 +171,7 @@ out mat3 rot_x;
 void main()
 {
   // Rotate and translate vertex
-  float alpha = iMouse.x / iResolution.x * M_PI * 2.0;
+  float alpha = iMouse.x / iResolution.x * M_PI * 2.0 + M_PI;
   float beta = (0.5 - iMouse.y / iResolution.y) * M_PI * 2.0;
   rot_y = mat3(vec3(cos(alpha), 0, sin(alpha)),
                vec3(0, 1, 0),
@@ -290,7 +290,7 @@ mat3 oriented_matrix(vec3 n)
 vec2 lonlat(vec3 p)
 {
   float lon = atan(p.x, -p.z) / (2.0 * PI) + 0.5;
-  float lat = atan(p.y, length(p.xz)) / PI + 0.5;
+  float lat = 0.5 - atan(p.y, length(p.xz)) / PI;
   return vec2(lon, lat);
 }
 
