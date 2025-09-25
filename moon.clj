@@ -104,7 +104,10 @@
 (defn download [url target]
   (with-open [in (io/input-stream url)
               out (io/output-stream target)]
-    (io/copy in out)))
+    (print "Downloading" target "... ")
+    (flush)
+    (io/copy in out)
+    (println "done")))
 
 
 (def moon-tif "lroc_color_poles_2k.tif")
