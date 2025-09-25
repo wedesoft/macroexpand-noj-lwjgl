@@ -169,7 +169,7 @@ void main()
 {
   // Rotate and translate vertex
   float alpha = iMouse.x / iResolution.x * M_PI * 2.0;
-  float beta = (iMouse.y / iResolution.y -0.5) * M_PI * 2.0;
+  float beta = (0.5 - iMouse.y / iResolution.y) * M_PI * 2.0;
   rot_y = mat3(vec3(cos(alpha), 0, sin(alpha)),
                vec3(0, 1, 0),
                vec3(-sin(alpha), 0, cos(alpha)));
