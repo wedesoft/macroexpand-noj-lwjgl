@@ -12,5 +12,6 @@ clj -M moon.clj
 ```
 
 You can click and drag to rotate the Moon.
+See following demo video:
 
 [![Moon program demo video](https://i.ytimg.com/vi/UdTs5tH3DxQ/hqdefault.jpg)](https://www.youtube.com/watch?v=UdTs5tH3DxQ)
