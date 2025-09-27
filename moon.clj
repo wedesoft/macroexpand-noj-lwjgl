@@ -109,7 +109,6 @@
     (io/copy in out)
     (println "done")))
 
-
 (def moon-tif "lroc_color_poles_2k.tif")
 (when (not (.exists (io/file moon-tif)))
   (download
