@@ -32,7 +32,6 @@
     (GLFW/glfwCreateWindow window-width window-height "Invisible Window" 0 0)))
 
 (GLFW/glfwShowWindow window)
-; (GLFW/glfwSwapBuffers window)
 
 (GLFW/glfwMakeContextCurrent window)
 (GL/createCapabilities)
@@ -138,19 +137,19 @@
 (def vertices-cube
   (float-array [-1.0 -1.0 -1.0
                  1.0 -1.0 -1.0
-                 1.0  1.0 -1.0
                 -1.0  1.0 -1.0
+                 1.0  1.0 -1.0
                 -1.0 -1.0  1.0
                  1.0 -1.0  1.0
-                 1.0  1.0  1.0
-                -1.0  1.0  1.0]))
+                -1.0  1.0  1.0
+                 1.0  1.0  1.0]))
 
 (def indices-cube
-  (int-array [0 1 2 3
-              7 6 5 4
-              0 3 7 4
-              5 6 2 1
-              3 2 6 7
+  (int-array [0 1 3 2
+              6 7 5 4
+              0 2 6 4
+              5 7 3 1
+              2 3 7 6
               4 5 1 0]))
 
 (def vertex-shader-code "
