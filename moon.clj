@@ -285,21 +285,21 @@ mat3 oriented_matrix(vec3 n)
   return mat3(n, o1, o2);
 }
 
-vec2 lonlat(vec3 p)
+vec2 uv(vec3 p)
 {
   float lon = atan(p.x, -p.z) / (2.0 * PI) + 0.5;
   float lat = 0.5 - atan(p.y, length(p.xz)) / PI;
   return vec2(lon, lat);
 }
 
-vec3 color(vec2 lonlat)
+vec3 color(vec2 uv)
 {
-  return texture(moon, lonlat).rgb;
+  return texture(moon, uv).rgb;
 }
 
 float elevation(vec3 p)
 {
-  return texture(ldem, lonlat(p)).r;
+  return texture(ldem, uv(p)).r;
 }
 
 vec3 normal(mat3 horizon, vec3 p)
@@ -317,7 +317,7 @@ void main()
 {
   mat3 horizon = oriented_matrix(normalize(vpoint));
   float phong = ambient + diffuse * max(0.0, dot(transpose(rot_y) * light, normal(horizon, vpoint)));
-  fragColor = vec4(color(lonlat(vpoint)).rgb * phong, 1);
+  fragColor = vec4(color(uv(vpoint)).rgb * phong, 1);
 }")
 
 (def vertex-shader (make-shader vertex-shader-code GL30/GL_VERTEX_SHADER))
