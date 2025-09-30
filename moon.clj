@@ -4,8 +4,7 @@
 (import '[javax.imageio ImageIO]
         '[org.lwjgl BufferUtils]
         '[org.lwjgl.glfw GLFW GLFWCursorPosCallbackI GLFWMouseButtonCallbackI]
-        '[org.lwjgl.opengl GL GL11 GL13 GL15 GL20 GL30]
-        '[org.lwjgl.stb STBImageWrite])
+        '[org.lwjgl.opengl GL GL11 GL13 GL15 GL20 GL30])
 
 
 (def window-width 1280)
