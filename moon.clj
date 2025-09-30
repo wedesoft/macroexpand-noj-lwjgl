@@ -286,9 +286,9 @@ mat3 oriented_matrix(vec3 n)
 
 vec2 uv(vec3 p)
 {
-  float lon = atan(p.x, -p.z) / (2.0 * PI) + 0.5;
-  float lat = 0.5 - atan(p.y, length(p.xz)) / PI;
-  return vec2(lon, lat);
+  float u = atan(p.x, -p.z) / (2.0 * PI) + 0.5;
+  float v = 0.5 - atan(p.y, length(p.xz)) / PI;
+  return vec2(u, v);
 }
 
 vec3 color(vec2 uv)
