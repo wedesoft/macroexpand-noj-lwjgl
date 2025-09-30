@@ -317,7 +317,7 @@ void main()
 {
   mat3 horizon = oriented_matrix(normalize(vpoint));
   float phong = ambient + diffuse * max(0.0, dot(transpose(rot_y) * light, normal(horizon, vpoint)));
-  fragColor = vec4(color(uv(vpoint)).rgb * phong, 1);
+  fragColor = vec4(color(uv(vpoint)) * phong, 1);
 }")
 
 (def vertex-shader (make-shader vertex-shader-code GL30/GL_VERTEX_SHADER))
