@@ -29,7 +29,7 @@
   (do
     (GLFW/glfwDefaultWindowHints)
     (GLFW/glfwWindowHint GLFW/GLFW_VISIBLE GLFW/GLFW_FALSE)
-    (GLFW/glfwCreateWindow window-width window-height "Invisible Window" 0 0)))
+    (GLFW/glfwCreateWindow window-width window-height "Moon" 0 0)))
 
 (GLFW/glfwShowWindow window)
 
