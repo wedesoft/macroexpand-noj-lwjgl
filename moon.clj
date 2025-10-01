@@ -7,8 +7,6 @@
         '[org.lwjgl.opengl GL GL11 GL13 GL15 GL20 GL30])
 
 
-(def window-width 1280)
-(def window-height 720)
 (def radius 1737.4)
 
 (def mouse-pos (atom [0.0 0.0]))
@@ -24,11 +22,14 @@
 
 (GLFW/glfwInit)
 
-(def window
-  (do
-    (GLFW/glfwDefaultWindowHints)
-    (GLFW/glfwWindowHint GLFW/GLFW_VISIBLE GLFW/GLFW_FALSE)
-    (GLFW/glfwCreateWindow window-width window-height "Moon" 0 0)))
+(def monitor (GLFW/glfwGetPrimaryMonitor))
+(def mode (GLFW/glfwGetVideoMode monitor))
+(def window-width (.width mode))
+(def window-height (.height mode))
+
+(GLFW/glfwDefaultWindowHints)
+(GLFW/glfwWindowHint GLFW/GLFW_DECORATED GLFW/GLFW_FALSE)
+(def window (GLFW/glfwCreateWindow window-width window-height "cube" 0 0))
 
 (GLFW/glfwShowWindow window)
 
