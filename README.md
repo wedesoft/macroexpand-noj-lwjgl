@@ -13,3 +13,5 @@ clj -M moon.clj
 
 You can click and drag to rotate the Moon.
 See [demo video](https://www.youtube.com/watch?v=UdTs5tH3DxQ).
+
+See [Macroexpand Noj slides](https://www.wedesoft.de/downloads/clojure-lwjgl.pdf) for more information.
