@@ -2,6 +2,8 @@
 
 Small example program using LWJGL's OpenGL bindings to render data from the [NASA CGI Moon Kit](https://svs.gsfc.nasa.gov/4720/).
 
+Presented at [Macroexpand Noj 2025](https://scicloj.github.io/macroexpand-2025/).
+
 ![Moon program screenshot](moon.jpg)
 
 Run it likes this.
